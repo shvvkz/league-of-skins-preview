@@ -1,0 +1,83 @@
+{
+    "champions":[{
+        "name":"Aatrox",
+        "id":"266",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Aatrox.png",
+        "skins":[{
+            "Classic Aatrox": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/ce/Skin_Splash_Classic_Aatrox.jpg"
+        },{
+            "Blood moon":"https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/ff/Skin_Splash_Blood_Moon_Aatrox.jpg"
+        },{
+            "Blood moon Prestige edition":"https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/41/Skin_Splash_Blood_Moon_Aatrox_Prestige_Edition.jpg"
+        },{
+            "Justicar": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/ed/Skin_Splash_Justicar_Aatrox.jpg"
+        }]
+    },
+    {
+        "name":"Ahri",
+        "id":"103",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Ahri.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Akali",
+        "id":"84",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Akali.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Alistar",
+        "id":"12",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Alistar.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Amumu",
+        "id":"32",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Amumu.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Anivia",
+        "id":"34",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Anivia.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Annie",
+        "id":"1",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Annie.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Aphelios",
+        "id":"523",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Aphelios.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Ashe",
+        "id":"22",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Ashe.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Aurelion Sol",
+        "id":"136",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/AurelionSol.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Azir",
+        "id":"268",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Azir.png",
+        "skins":[{}]
+    },
+    {
+        "name":"Bard",
+        "id":"432",
+        "img": "https://raw.githubusercontent.com/MU-PING/LoL-champions-crawler/main/Champions/Bard.png",
+        "skins":[{}]
+    }
+]
+}
