@@ -1,0 +1,12 @@
+<div *ngFor="let champion of champions">
+    <h2>{{ champion.name }}</h2>
+    <img [src]="champion.icon" alt="{{ champion.name }}" (click)="showSkins(champion)">
+  </div>
+  
+  <div *ngIf="selectedChampion">
+    <h2>{{ selectedChampion.name }} - Skins</h2>
+    <div *ngFor="let skin of selectedChampion.skins">
+      <img [src]="getSkinUrl(skin)" alt="{{ skin }}">
+    </div>
+  </div>
+  
