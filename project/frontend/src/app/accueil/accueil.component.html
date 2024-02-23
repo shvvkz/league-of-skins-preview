@@ -1,6 +1,6 @@
 <div *ngFor="let champion of champions">
     <h2>{{ champion.name }}</h2>
-    <img [src]="champion.img" alt="{{ champion.name }}" (click)="showSkins(champion)">
+    <img [src]="champion.icon" alt="{{ champion.name }}" (click)="showSkins(champion)">
   </div>
   
   <div *ngIf="selectedChampion">
