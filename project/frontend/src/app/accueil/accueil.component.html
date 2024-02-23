@@ -1,12 +1,37 @@
-<div *ngFor="let champion of champions">
-    <h2>{{ champion.name }}</h2>
-    <img [src]="champion.icon" alt="{{ champion.name }}" (click)="showSkins(champion)">
-  </div>
-  
-  <div *ngIf="selectedChampion">
-    <h2>{{ selectedChampion.name }} - Skins</h2>
-    <div *ngFor="let skin of selectedChampion.skins">
-      <img [src]="getSkinUrl(skin)" alt="{{ skin }}">
+<div class="background-container">
+  <app-navbar></app-navbar>
+  <div>
+    <div class="container-text">
+      <p>Lorem:</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </div>
-  
+  <a class="buttonStart">
+    <p>Start Now</p>
+    <img src="../../assets/img/right-arrows.svg" alt="arrow" class="arrow">
+  </a>
+  <div class="context">
+    <p>Lorem:</p>
+    <div class="context-container">
+      <div class="actions-container">
+        <img class="image" src="../../assets/img/champions.svg">
+        <p class="title">Champions</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+      <div class="actions-container">
+        <img class="image" src="../../assets/img/skins.svg">
+        <p class="title">Skins</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+      <div class="actions-container">
+        <img class="image" src="../../assets/img/preview.svg">
+        <p class="title">Preview</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+    </div>
+  </div>
+</div>
