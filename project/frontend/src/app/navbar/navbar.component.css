@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'CrimsonText';
+    src: url('../../assets/font/CrimsonText-Regular.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    /* Ajoutez ici d'autres variantes de la police si nécessaire */
+  }
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.5);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar img{
+    width: 25vw;
+    height: 10vh;
+    margin-left: 2vw;
+}
+.link-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin-right:2vw;
+}
+.link-container a{
+    text-decoration: none;
+    font-size: 1.3em;
+    margin: 0 1vw;
+    /* utilise le font dans assets */
+    font-family: 'CrimsonText';
+    color: #ffffff;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+.link-container a:hover{
+    text-shadow: 0px 0px 5px #ffffff;
+}

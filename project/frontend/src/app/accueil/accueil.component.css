@@ -1,0 +1,114 @@
+.background-container {
+  background-image: url('../../assets/img/bg.png');
+  width: 100vw; /* 100% de la largeur de la fenêtre */
+  height: 100vh; /* 100% de la hauteur de la fenêtre */
+    background-size: cover; /* Redimensionnez l'image de manière à ce qu'elle couvre toute la surface */
+  z-index: 0;
+}
+
+.container-text{
+    z-index: 1;
+    font-family: 'CrimsonText';
+    margin-left: 10vh;
+    padding-right: 15vw;
+    padding-top: 10vh;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.buttonStart{
+    margin-top: 5vh;
+    margin-left: 10vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: white 2px solid;
+    width: 25vw;
+    border-radius: 20vw;
+    height:7vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    transition: 0.5s;
+}
+.buttonStart p{
+    text-decoration: none;
+    margin-left: 1.5vw;
+    color: rgba(0, 0, 0, 0.99);
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'LilitaOne';
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+    width: 20vw;
+    -webkit-text-stroke: 1px #ffffff;
+}
+.buttonStart:hover{
+
+    cursor: pointer;
+}
+
+.buttonStart img {
+    width: 4vw;
+    height: 4vw;
+    position: absolute; /* Positionnez l'image de façon absolue par rapport à son parent */
+    left: 19vw; /* Positionnez l'image initialement à gauche du bouton */
+    transition: left 0.3s ease; /* Ajoutez une transition pour l'animation fluide */
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+}
+
+.buttonStart:hover img {
+    left:20vw; /* Déplacez l'image vers la droite lorsque le bouton est survolé */
+}
+
+.context{
+    margin-top:10vh;
+}
+
+.context p{
+    font-family: 'CrimsonText';
+    font-size: 1.1em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    text-align: justify;
+
+}
+.context-container{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: space-between;
+    align-items: center;
+    width:100vw;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.context-container .actions-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+}
+.context-container .actions-container .image{
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255,0.6));
+    margin-top: 1vh;
+    width: 7vh;
+    height: 7vh;
+}
+.context-container .actions-container .title{
+    text-transform: uppercase;
+    margin-top: 0.5vh;
+    margin-bottom:0;
+}
+.context-container .actions-container .description{
+    /*text doit être centré vers le milieu
+    */
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom:0;
+}
