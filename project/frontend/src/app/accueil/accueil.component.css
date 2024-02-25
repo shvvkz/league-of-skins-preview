@@ -2,20 +2,17 @@
   background-image: url('../../assets/img/bg.png');
   width: 100vw; /* 100% de la largeur de la fenêtre */
   height: 100vh; /* 100% de la hauteur de la fenêtre */
+    background-size: cover; /* Redimensionnez l'image de manière à ce qu'elle couvre toute la surface */
   z-index: 0;
 }
-@font-face {
-    font-family: 'Cuprum';
-    src: url('../../assets/font/Cuprum-VariableFont_wght.ttf') format('truetype'); /* Chemin vers le fichier de police */
-    /* Ajoutez ici d'autres variantes de la police si nécessaire */
-  }
+
 .container-text{
     z-index: 1;
-    font-family: 'Cuprum';
+    font-family: 'CrimsonText';
     margin-left: 10vh;
     padding-right: 15vw;
     padding-top: 10vh;
-    font-size: 1.5em;
+    font-size: 1.1em;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
 }
@@ -33,7 +30,7 @@
     border-radius: 20vw;
     height:7vh;
     background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 10px #ffffff;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     position: relative;
     transition: 0.5s;
 }
@@ -45,14 +42,13 @@
     font-weight: bold;
     font-family: 'LilitaOne';
     text-transform: uppercase;
-    text-shadow: 0px 0px 5px #ffffff;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
     width: 20vw;
     -webkit-text-stroke: 1px #ffffff;
 }
 .buttonStart:hover{
 
     cursor: pointer;
-    transform: scale(1.005);
 }
 
 .buttonStart img {
@@ -61,7 +57,7 @@
     position: absolute; /* Positionnez l'image de façon absolue par rapport à son parent */
     left: 19vw; /* Positionnez l'image initialement à gauche du bouton */
     transition: left 0.3s ease; /* Ajoutez une transition pour l'animation fluide */
-    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.6));
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
 }
 
 .buttonStart:hover img {
@@ -73,8 +69,8 @@
 }
 
 .context p{
-    font-family: 'Cuprum';
-    font-size: 1.5em;
+    font-family: 'CrimsonText';
+    font-size: 1.1em;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
     margin-left: 10vh;
@@ -88,7 +84,6 @@
     justify-content: space-between;
     align-items: center;
     width:100vw;
-    height:31vh;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
 }
@@ -98,17 +93,22 @@
     justify-content: center;
     align-items: center;
     width: 30vw;
-    margin-right: 10vh;
 }
 .context-container .actions-container .image{
-    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255,0.6));
+    margin-top: 1vh;
+    width: 7vh;
+    height: 7vh;
 }
 .context-container .actions-container .title{
     text-transform: uppercase;
-    text-shadow: 0px 0px 3px #ffffff;
+    margin-top: 0.5vh;
+    margin-bottom:0;
 }
 .context-container .actions-container .description{
     /*text doit être centré vers le milieu
     */
     text-align: center;
+    margin-top: 1vh;
+    margin-bottom:0;
 }

@@ -21,10 +21,6 @@ export class AccueilComponent implements OnInit {
       // Préchargement des images
       this.champions.forEach(champion => {
         this.preloadImage(champion.icon);
-        champion.skins.forEach((skin: any) => {
-          const imageUrl = Object.values(skin)[0] as string;
-          this.preloadImage(imageUrl);
-        });
       });
     });
   }
