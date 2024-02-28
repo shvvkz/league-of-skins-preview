@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ChampionsComponent } from './champions/champions.component';
+import { ChampionDetailsComponent } from './champion-details/champion-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
-    NavbarComponent
+    NavbarComponent,
+    ChampionsComponent,
+    ChampionDetailsComponent
   ],
   imports: [
     BrowserModule,

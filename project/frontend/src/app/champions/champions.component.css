@@ -1,0 +1,84 @@
+/* champions.component.css */
+
+.background-container {
+    background-image: url('../../assets/img/bg.png');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    z-index: 0;
+  }
+.container-champ {
+  display: flex; /* Utilisation de flexbox pour aligner les éléments */
+  justify-content: center; /* Centrer horizontalement les éléments enfants */
+}
+
+.champions {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+    flex-wrap: wrap; /* Permettre le retour à la ligne des éléments enfants */
+    justify-content: center; /* Centrer horizontalement les éléments enfants */
+    margin-top: 1vh;
+    width: 80vw;
+    height:70vh;
+    overflow-y: auto;
+    padding: 1vh;
+    border: 3px solid #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px 0 0 20px;
+}
+
+.champion-image {
+    width: 100px;
+    height: 100px;
+    padding: 1px
+}
+
+.container-input{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+.input {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    width: 340px;
+}
+
+.input__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.475rem 0.5rem;
+    margin: 0.575rem 0.5rem;
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transition: transform 120ms ease-in;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #ffffff;
+    font-family: 'CrimsonText';
+}
+
+.input__field {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: 3px solid #ffffff;
+    padding: 0.75rem 0.5rem;
+    background: transparent;
+    border-radius: 4px;
+    outline: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 'CrimsonText';
+}
+
+.input__field:focus + .input__label,
+.input__field:not(:placeholder-shown) + .input__label {
+    transform: translate(-2rem, -100%) scale(0.8);
+    color: #ffffff;
+
+}

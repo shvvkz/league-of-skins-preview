@@ -1,0 +1,72 @@
+.background-container {
+    background-image: url('../../assets/img/bg.png');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    z-index: 0;
+  }
+.champion-details{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.411);
+    height: 60vh;
+    margin-top: 5vh;
+    padding: 1vh;
+    border-top: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+  }
+.container-splash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-top: 5vh;
+    z-index: 1;
+}
+.container-splash img{
+  height: 50vh;
+  z-index: 1;
+  border: 5px solid rgb(255, 255, 255);
+}
+
+.text{
+  margin-top: 2vh;
+  margin-left: 2vh;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.text p{
+  color: white;
+}
+.text h2{
+  color: white;
+}
+.container-button{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container-button a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  width: 20vw;
+  margin-top: 2vh;
+  padding: 1vh;
+  background-color: #00000042;
+  border: 3px solid white;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.container-button a:hover{
+  background-color: #ffffff;
+  color: black;
+}
