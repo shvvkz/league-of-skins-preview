@@ -1,0 +1,16 @@
+<!-- champions.component.html -->
+    <app-navbar></app-navbar>
+<div class="background-container">
+
+    <div class="container-input">
+        <label class="input">
+            <input class="input__field" type="text" placeholder=" " (input)="searchChampion($event)"/>
+            <span class="input__label">SEARCH FOR A CHAMPION (exemple: Qiyana)</span>
+        </label>
+    </div>
+    <div class="container-champ">
+        <div class="champions">
+            <img *ngFor="let champion of filteredChampions" [src]="champion.icon" alt="champion" class="champion-image" id="{{ champion.name }}" (click)="detailsChampion(champion.name)">
+        </div>
+    </div>
+</div>

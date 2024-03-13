@@ -1,0 +1,23 @@
+<div class="background-container">
+<app-navbar></app-navbar>
+<div *ngIf="champion">
+    <div class="champion-details">
+        <div *ngIf="champion.skins && champion.skins.length > 0" class="container-splash">
+            <img [src]="getBaseSkinUrl(champion)" alt="{{ champion.name }} Base Skin">
+        </div>
+        <div class="championInfo">
+            <div class="text">
+                <h2>{{ champion.name }}</h2>
+                <p><strong>Title:</strong> {{ champion.title }}</p>
+                <p><strong>Tags:</strong> {{ champion.tags.join(', ') }}</p>
+                <p><strong>Description:</strong> {{ champion.description }}</p>
+            </div>
+            <div class="container-button">
+                <a href="./skins/{{champion.name}}">Découvrez les skins de {{champion.name}}!</a>
+                <a>Découvrez le modèle 3D de {{champion.name}}!</a>
+            </div>
+        </div>
+
+    </div>
+  </div>
+</div>

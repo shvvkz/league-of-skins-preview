@@ -1,16 +1,34 @@
-<div class="background-container">
+<div class="page-container">
   <app-navbar></app-navbar>
-  <div>
+  <div class="bgimg-1">
     <div class="container-text">
-      <p>Lorem:</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h1>League of Legends</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
   </div>
-  <a class="buttonStart">
+  <div class="StartBand">
+    <div class="left">
+      <p [ngClass]="{'scrolled': isScrolled}" [style.left.px]="scrolledPosition">You can check champions description.</p>
+    </div>
+  </div>
+
+  <div class="StartBand">
+    <div class ="right" >
+      <p [ngClass]="{'scrolled': isScrolled}" [style.left.px]="- scrolledPosition">You can check champions description.</p>
+    </div>
+  </div>
+
+  <div class="StartBand">
+    <div class="left"><p [ngClass]="{'scrolled': isScrolled}" [style.left.px]="scrolledPosition">You can check champions description.</p></div>
+  </div>
+  <div class="StartBand">
+    <div class="right">
+      <p [ngClass]="{'scrolled': isScrolled}" [style.left.px]="- scrolledPosition">You can check champions description.</p>
+    </div>
+  </div>
+  <div class="bgimg-2">
+  </div>
+  <!-- <a href="/champions" class="buttonStart">
     <p>Start Now</p>
     <img src="../../assets/img/right-arrows.svg" alt="arrow" class="arrow">
   </a>
@@ -32,6 +50,5 @@
         <p class="title">Preview</p>
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
       </div>
-    </div>
-  </div>
+    </div> -->
 </div>

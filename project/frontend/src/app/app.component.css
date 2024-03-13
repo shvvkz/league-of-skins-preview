@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'LilitaOne';
+    src: url('../assets/font/LilitaOne-Regular.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    /* Ajoutez ici d'autres variantes de la police si nécessaire */
+  }
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url('../assets/font/CrimsonText-Regular.ttf') format('truetype'); /* Chemin vers le fichier de police */
+  /* Ajoutez ici d'autres variantes de la police si nécessaire */
+}

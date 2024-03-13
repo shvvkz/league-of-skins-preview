@@ -1,114 +1,69 @@
-.background-container {
-  background-image: url('../../assets/img/bg.png');
-  width: 100vw; /* 100% de la largeur de la fenêtre */
+.page-container {
   height: 100vh; /* 100% de la hauteur de la fenêtre */
-  z-index: 0;
 }
-@font-face {
-    font-family: 'Cuprum';
-    src: url('../../assets/font/Cuprum-VariableFont_wght.ttf') format('truetype'); /* Chemin vers le fichier de police */
-    /* Ajoutez ici d'autres variantes de la police si nécessaire */
-  }
-.container-text{
-    z-index: 1;
-    font-family: 'Cuprum';
-    margin-left: 10vh;
-    padding-right: 15vw;
-    padding-top: 10vh;
-    font-size: 1.5em;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px #000000;
+.bgimg-1{
+    background-image: url('../../assets/img/bg.png');
+    min-height: 100vh;
 }
-
-.buttonStart{
-    margin-top: 5vh;
-    margin-left: 10vh;
-    padding-top: 0.5vh;
-    padding-bottom: 0.5vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: white 2px solid;
-    width: 25vw;
-    border-radius: 20vw;
-    height:7vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 10px #ffffff;
+.bgimg-2{
+    background-image: url('../../assets/img/bg2.jfif');
+    min-height: 100vh;
+}
+.bgimg-1, .bgimg-2{
     position: relative;
-    transition: 0.5s;
+    z-index: 0 ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.buttonStart p{
-    text-decoration: none;
-    margin-left: 1.5vw;
-    color: rgba(0, 0, 0, 0.99);
-    font-size: 3vw;
-    font-weight: bold;
-    font-family: 'LilitaOne';
-    text-transform: uppercase;
-    text-shadow: 0px 0px 5px #ffffff;
-    width: 20vw;
-    -webkit-text-stroke: 1px #ffffff;
-}
-.buttonStart:hover{
-
-    cursor: pointer;
-    transform: scale(1.005);
-}
-
-.buttonStart img {
-    width: 4vw;
-    height: 4vw;
-    position: absolute; /* Positionnez l'image de façon absolue par rapport à son parent */
-    left: 19vw; /* Positionnez l'image initialement à gauche du bouton */
-    transition: left 0.3s ease; /* Ajoutez une transition pour l'animation fluide */
-    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.6));
-}
-
-.buttonStart:hover img {
-    left:20vw; /* Déplacez l'image vers la droite lorsque le bouton est survolé */
-}
-
-.context{
-    margin-top:10vh;
-}
-
-.context p{
-    font-family: 'Cuprum';
-    font-size: 1.5em;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px #000000;
-    margin-left: 10vh;
-    margin-right: 10vh;
-    text-align: justify;
-
-}
-.context-container{
+.bgimg-1 .container-text{
+    position: absolute;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: space-between;
-    align-items: center;
-    width:100vw;
-    height:31vh;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-}
-.context-container .actions-container{
-    display: flex;
+    min-width: 100%;
+    top:20vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30vw;
-    margin-right: 10vh;
-}
-.context-container .actions-container .image{
-    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
-}
-.context-container .actions-container .title{
-    text-transform: uppercase;
-    text-shadow: 0px 0px 3px #ffffff;
-}
-.context-container .actions-container .description{
-    /*text doit être centré vers le milieu
-    */
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    font-family: 'CrimsonText';
+    font-size: 1.1em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+.StartBand{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    overflow-x: hidden;
+
+}
+.StartBand p {
+    position: relative;
+    display: flex;
+    font-family: 'CrimsonText';
+    font-size: 4vw;
+}
+.right{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.left{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: flex-start;
+}
+.left p {
+    font-size: 4vw;
+    color: #ffffff;
+}
+.right p {
+    font-size: 4vw;
+    color: #000000;
 }

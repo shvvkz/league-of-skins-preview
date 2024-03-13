@@ -1,45 +1,53 @@
-import { Component, OnInit } from '@angular/core';
-import { AccueilService } from './accueil.service';
+import { Component, HostListener, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
   styleUrls: ['./accueil.component.css']
 })
-export class AccueilComponent implements OnInit {
+export class AccueilComponent {
+  isScrolled: boolean = false;
+  scrolledPosition: number = 0;
+  previousScrollPosition: number = 0;
+  scrollOffset: number = 200; // Décalage pour commencer l'animation avant que l'élément soit pleinement visible
+  scrollDirection: number = 1; // 1 pour défilement vers la droite, -1 pour défilement vers la gauche
 
-  champions: any[] = [];
-  selectedChampion: any = null;
-  championImages: string[] = [];
+  constructor(private elRef: ElementRef) {}
 
-  constructor(private dataService: AccueilService) { }
-
-  ngOnInit(): void {
-    this.dataService.fetchData().subscribe(data => {
-      this.champions = data.champions;
-
-      // Préchargement des images
-      this.champions.forEach(champion => {
-        this.preloadImage(champion.icon);
-        champion.skins.forEach((skin: any) => {
-          const imageUrl = Object.values(skin)[0] as string;
-          this.preloadImage(imageUrl);
-        });
-      });
-    });
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    this.checkScroll();
   }
 
-  preloadImage(url: string): void {
-    const img = new Image();
-    img.src = url;
-    this.championImages.push(url); // Stockage de l'URL dans le tableau pour référence ultérieure
-  }
+  checkScroll() {
+    const startBand = this.elRef.nativeElement.querySelector('.StartBand');
+    const rect = startBand.getBoundingClientRect();
+    const currentScrollPosition = window.scrollY;
 
-  showSkins(champion: any) {
-    this.selectedChampion = champion;
-  }
+    if (rect.top < window.innerHeight - this.scrollOffset) {
+      this.isScrolled = true;
 
-  getSkinUrl(skin: String): string {
-    return Object.values(skin)[0];
+      // Vérifie si l'utilisateur est en train de faire défiler vers le bas
+      if (currentScrollPosition > this.previousScrollPosition) {
+        // Mise à jour de la position de défilement
+        this.scrolledPosition += 10 * this.scrollDirection;
+
+        // Changement de direction si la limite est atteinte
+        if (this.scrolledPosition >= 700 || this.scrolledPosition <= 0) {
+          this.scrollDirection *= -1;
+        }
+
+        // Correction pour éviter que la position de défilement dépasse les limites
+        if (this.scrolledPosition > 700) {
+          this.scrolledPosition = 700;
+        } else if (this.scrolledPosition < 0) {
+          this.scrolledPosition = 0;
+        }
+      }
+
+      this.previousScrollPosition = currentScrollPosition;
+    } else {
+      this.isScrolled = false;
+    }
   }
 }
